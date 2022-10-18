@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_homepage/pages/homepage.dart';
+import 'package:google_homepage/responsive_layout/mobile_screen_layput.dart';
+import 'package:google_homepage/responsive_layout/responsive_layout_screen.dart';
+import 'package:google_homepage/responsive_layout/webscreen_layout.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +12,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
+      home: ResponsiveLayoutScreen(
+        mobileScreenLayout: MobileScreenLyOut(),
+        webScreenLayout: WebScreenLyOut(),
       ),
-      home: const HomePage(),
     );
   }
 }
