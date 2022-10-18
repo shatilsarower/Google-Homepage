@@ -6,7 +6,15 @@ class WebScreenLyOut extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: Text("Hello from Web"),
+      body: Center(
+        child: Text(
+          "Hello from Web",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
     );
   }
 }
